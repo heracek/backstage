@@ -1,5 +1,11 @@
 # @backstage/plugin-sonarqube
 
+## 0.1.16
+
+### Patch Changes
+
+- db802fafb: Export isSonarQubeAvailable.
+
 ## 0.1.15
 
 ### Patch Changes

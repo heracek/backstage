@@ -1,5 +1,13 @@
 # @backstage/plugin-techdocs-backend
 
+## 0.7.1
+
+### Patch Changes
+
+- cba5944fc: Change the response status of metadata endpoints in case a documentation is not
+  available to `404 NOT FOUND`. This also introduces the JSON based error messages
+  used by other backends.
+
 ## 0.7.0
 
 ### Minor Changes

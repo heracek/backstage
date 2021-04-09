@@ -1,5 +1,12 @@
 # example-app
 
+## 0.2.24
+
+### Patch Changes
+
+- Updated dependencies [a360f9478]
+  - @backstage/plugin-scaffolder@0.9.0
+
 ## 0.2.23
 
 ### Patch Changes

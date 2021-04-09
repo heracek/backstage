@@ -1,5 +1,23 @@
 # @backstage/plugin-scaffolder-backend
 
+## 0.9.6
+
+### Patch Changes
+
+- d8ffec739: Add built-in publish action for creating GitHub pull requests.
+- d840d30bc: Bitbucket server needs username to be set as well as the token or appPassword for the publishing process to work.
+
+  ```yaml
+  integrations:
+    bitbucket:
+      - host: bitbucket.mycompany.com
+        apiBaseUrl: https://bitbucket.mycompany.com/rest/api/1.0
+        token: token
+        username: username
+  ```
+
+- a376e3ee8: Adds a collaborator field to GitHub publish action for multiple users and access levels
+
 ## 0.9.5
 
 ### Patch Changes

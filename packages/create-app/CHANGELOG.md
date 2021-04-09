@@ -1,5 +1,45 @@
 # @backstage/create-app
 
+## 1.0.0
+
+### Patch Changes
+
+- a360f9478: Expose the catalog-import route as an external route from the scaffolder.
+
+  This will make it possible to hide the "Register Existing Component" button
+  when you for example are running backstage with `catalog.readonly=true`.
+
+  As a consequence of this change you need add a new binding to your createApp call to
+  keep the button visible. However, if you instead want to hide the button you can safely
+  ignore the following example.
+
+  To bind the external route from the catalog-import plugin to the scaffolder template
+  index page, make sure you have the appropriate imports and add the following
+  to the createApp call:
+
+  ```typescript
+  import { catalogImportPlugin } from '@backstage/plugin-catalog-import';
+
+  const app = createApp({
+    // ...
+    bindRoutes({ bind }) {
+      // ...
+      bind(scaffolderPlugin.externalRoutes, {
+        registerComponent: catalogImportPlugin.routes.importPage,
+      });
+    },
+  });
+  ```
+
+- Updated dependencies [d8ffec739]
+- Updated dependencies [a360f9478]
+- Updated dependencies [d840d30bc]
+- Updated dependencies [cba5944fc]
+- Updated dependencies [a376e3ee8]
+  - @backstage/plugin-scaffolder-backend@0.9.6
+  - @backstage/plugin-scaffolder@0.9.0
+  - @backstage/plugin-techdocs-backend@0.7.1
+
 ## 0.3.17
 
 ### Patch Changes
